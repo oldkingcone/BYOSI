@@ -14,6 +14,9 @@ This method of attack exploits the fact that, the steps outlined in the powershe
 
 The 4 lines of powershell code completely bypass the EDR and Defender AMSI is blind to it. The icing on the entire cake, is that github works as a trusted deployer.
 
+## What this script does
+
+The powershell script evades EDR/AV in 4 simple steps. Grabs the PHP archive for windows, extracts it to the C:\Temp\ directory in a new directory named php, grabs the implant PHP script saves it also under C:\Temp\php\ and executes the script using the whitelisted php binary, congrats, you now have a shell on a Crowdstrike monitored system, whats real funny is that, if im remembering correctly, sentinel one cant even scan php file types. So let your imaginations run wild.
 
 ## Disclaimer.
 
