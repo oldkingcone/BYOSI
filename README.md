@@ -6,7 +6,9 @@ Evade EDR's the simple way, by not touching any of the API's they hook.
 
 Most edr's ive noticed failed to scan scripting files, as they treat them like text files. All the super flashy methods, such as residing in memory, thread injection, etc. are all very much watched. You cant even run a binary if the binary is not signed by a valid CA.
 
-In comes BYOSI. All scripting interpeters are signed by whom ever created them, and every single one of those certs is a valid cert. Well upon testing in a live environment, the php script in this repository, which should be highly signatured was able to not only run on a system monitored by crowdstrike and trellix, but was able to establish a completely external connection WITHOUT causing any EDR detections.
+In comes BYOSI(bring your own scripting interpreter). All scripting interpeters are signed by whom ever created them, and every single one of those certs is a valid cert. Well upon testing in a live environment, the php script in this repository, which should be highly signatured was able to not only run on a system monitored by crowdstrike and trellix, but was able to establish a completely external connection WITHOUT causing any EDR detections. Over the years i have noticed, every single EDR/AV is looking for binaries, because thats the popular flashy way of deliverying implants. Every single EDR is tuned to check for high entropy, suspicious sections in a binary, etc. 
+
+But most if not all, are not configured to look into a simple PHP script.
 
 This method of attack exploits the fact that, the steps outlined in the powershell script are exactly what a developer would be doing to some degree when first entering an environment.
 
