@@ -12,7 +12,7 @@ But most if not all, are not configured to look into a simple PHP script.
 
 This method of attack exploits the fact that, the steps outlined in the powershell script are exactly what a developer would be doing to some degree when first entering an environment.
 
-The 4 lines of powershell code completely bypass the EDR and Defender AMSI is blind to it.
+The 4 lines of powershell code completely bypass the EDR and Defender AMSI is blind to it. The icing on the entire cake, is that github works as a trusted deployer.
 
 
 ## Disclaimer.
