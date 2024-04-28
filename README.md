@@ -21,3 +21,7 @@ The powershell script evades EDR/AV in 4 simple steps. Grabs the PHP archive for
 ## Disclaimer.
 
 I am in no way responsible for the misuse of this. This issue is a major blind spot in EDR protection, i am only bringing it to everyones attention.
+
+## Thanks Section
+
+A big thanks to @im4x5yn74x for affectionately giving it the name BYOSI, and helping with the env to test in bringing this attack method to life.
