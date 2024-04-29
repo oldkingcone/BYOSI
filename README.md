@@ -20,9 +20,8 @@ The 4 lines of powershell code completely bypass the EDR in addition to Defender
 
 The powershell script evades EDR/AV in 4 simple steps.
 ```
-Step 1.) Grabs the PHP archive for windows, extracts it to the C:\Temp\ directory in a new directory named php.
-Step 2.) This script then grabs the implant PHP script or shell and also saves it also under C:\Temp\php\ 
-Step 3.) The script then executes the implant or shell using the whitelisted php binary.
+Step 1. and 2) Grabs the PHP archive for windows, extracts it to the C:\Temp\ directory in a new directory named php.
+Step 3 and 4.) This script then grabs the implant PHP script or shell and also saves it also under C:\Temp\php\; The script then executes the implant or shell using the whitelisted php binary.
 ```
 congrats, you now have a shell on a Crowdstrike monitored system, whats real funny is that, if im remembering correctly, sentinel one cant even scan php file types. So let your imaginations run wild.
 
