@@ -29,3 +29,7 @@ I am in no way responsible for the misuse of this. This issue is a major blind s
 ## Thanks Section
 
 A big thanks to @im4x5yn74x for affectionately giving it the name BYOSI, and helping with the env to test in bringing this attack method to life.
+
+## Edit
+
+It appears as though MS Defender is now flagging the PHP script as malicious, but still fully allowing the Powershell script full execution. so, modify the PHP script.
