@@ -4,19 +4,27 @@ Evade EDR's the simple way, by not touching any of the API's they hook.
 
 ## Theory
 
-Most edr's ive noticed failed to scan scripting files, as they treat them like text files. All the super flashy methods, such as residing in memory, thread injection, etc. are all very much watched. You cant even run a binary if the binary is not signed by a valid CA.
+Most edr's ive noticed failed to scan scripting files, as they treat them like text files boohoo for them, profit for us. 
 
-In comes BYOSI(bring your own scripting interpreter). All scripting interpeters are signed by whom ever created them, and every single one of those certs is a valid cert. Well upon testing in a live environment, the php script in this repository, which should be highly signatured was able to not only run on a system monitored by crowdstrike and trellix, but was able to establish a completely external connection WITHOUT causing any EDR detections. Over the years i have noticed, every single EDR/AV is looking for binaries, because thats the popular flashy way of deliverying implants. Every single EDR is tuned to check for high entropy, suspicious sections in a binary, etc. 
+All the super flashy methods, such as residing in memory, thread injection, etc. are all very much watched. You cant even run a binary if the binary is not signed by a valid CA.
 
-But most if not all, are not configured to look into a simple PHP script.
+In comes BYOSI(bring your own scripting interpreter). All scripting interpeters are signed by whom ever created them, and every single one of those certs is a valid cert. Well upon testing in a live environment, the php script in this repository, which should be highly signatured was able to not only run on a system monitored by crowdstrike and trellix, but was able to establish a completely external connection WITHOUT causing any EDR detections. As mentioned previously, every single EDR/AV ignores script files and instead are looking for binaries, because thats the popular flashy way of deliverying implants or in our case shells. All EDR's are tuned to check for high entropy, suspicious sections in a binary, etc. 
 
-This method of attack exploits the fact that, the steps outlined in the powershell script are exactly what a developer would be doing to some degree when first entering an environment.
+But most if not all, are not configured to look into a simple script.
 
-The 4 lines of powershell code completely bypass the EDR and Defender AMSI is blind to it. The icing on the entire cake, is that github works as a trusted deployer.
+This method of attack exploits leverages that fact for pure profit, the steps outlined in the powershell script are exactly what a developer would be doing to some degree when first entering an environment.
+
+The 4 lines of powershell code completely bypass the EDR in addition to Defender/AMSI being completely blind to it. The icing on the entire cake, is that github works as a trusted deployer.
 
 ## What this script does
 
-The powershell script evades EDR/AV in 4 simple steps. Grabs the PHP archive for windows, extracts it to the C:\Temp\ directory in a new directory named php, grabs the implant PHP script saves it also under C:\Temp\php\ and executes the script using the whitelisted php binary, congrats, you now have a shell on a Crowdstrike monitored system, whats real funny is that, if im remembering correctly, sentinel one cant even scan php file types. So let your imaginations run wild.
+The powershell script evades EDR/AV in 4 simple steps.
+```
+Step 1.) Grabs the PHP archive for windows, extracts it to the C:\Temp\ directory in a new directory named php.
+Step 2.) This script then grabs the implant PHP script or shell and also saves it also under C:\Temp\php\ 
+Step 3.) The script then executes the implant or shell using the whitelisted php binary.
+```
+congrats, you now have a shell on a Crowdstrike monitored system, whats real funny is that, if im remembering correctly, sentinel one cant even scan php file types. So let your imaginations run wild.
 
 ## Disclaimer.
 
