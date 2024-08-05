@@ -33,3 +33,7 @@ A big thanks to @im4x5yn74x for affectionately giving it the name BYOSI, and hel
 ## Edit
 
 It appears as though MS Defender is now flagging the PHP script as malicious, but still fully allowing the Powershell script full execution. so, modify the PHP script.
+
+## EDIT 2
+
+If for some reason the payload is not firing properly. remove the quotes around the 4th line in the powershell script. 
