@@ -32,7 +32,7 @@ A big thanks to @im4x5yn74x for affectionately giving it the name BYOSI, and hel
 
 ## Edit
 
-It appears as though MS Defender is now flagging the PHP script as malicious, but still fully allowing the Powershell script full execution. so, modify the PHP script.
+~~It appears as though MS Defender is now flagging the PHP script as malicious, but still fully allowing the Powershell script full execution. so, modify the PHP script.~~ The issue now is that the PHP website has removed the initial zip archive, so youll have to modify that line of code, its line 1. find a version you want to use, and boom. popped a shell, defender doesnt flag the PHP script, no AV vendor properly identifies the script, this still works with a 100% success rate.
 
 ## Edit
 
